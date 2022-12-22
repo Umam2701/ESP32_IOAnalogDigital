@@ -14,46 +14,29 @@
 **LANGKAH KERJA**
 1) Instal lebih dulu Board ESP32 pada Arduino IDE
 2) Mengakses GPIO ESP32
-   
    **GPIO 1** - Rangkaian dengan 1 LED dengan 1 button. Kendalikan LED tersebut dengan button yang ada.
+   
    ![foto GPIO 1](https://user-images.githubusercontent.com/118170084/209065091-9b4f6e10-ffa3-46ab-9e8f-6967a642ba00.jpg)
-
    
    **Output GPIO 1**
-  
-
-
    
-   Analisa : Pada percobaan ini digunakan 1 LED dan 1 Button. Sesuai dengan script yang dijalankan, dari hasil keluaran didapatkan bahwa jika button ditekan maka LED akan menyala, dan akan mati ketika button dilepas.  
-   
+   Analisa : Pada langkah ini menggunakan 1 LED dan 1 Button. Ketika script GPIO 1 di run, maka output yang dihasilkan yaitu jika button di push maka LED akan menyala, dan LED akan mati jika button dilepas.
    
    **GPIO 2** - Kemudian, tambahkan 1 LED dan 1 button lagi. Untuk LED kedua ini, buat interval waktu 2 detik. Jadi walaupun button tetap ditekan, jika waktunya sudah habis, maka LED akan mati.
-  
-  
-   Keluaran
    
-
-
-
-
+   **Output GPIO 2**
+   
    Analisa : Pada percobaan GPIO 2 ini ditambahkan 1 LED dan 1 Button lagi (dalam gambar rangkaiannya langsung pada rangkaian GPIO 3). Sesuai dengan script yang dijalankan, hasil keluaran didapatkan bahwa jika button2 ditekan maka LED akan menyala 5 detik dan mati 5 detik, akan terus seperti itu selama button2 ditekan. Dan LED akan mati jika button2 dilepas.
    
-   
    **GPIO 3** - Kemudian, tambahkan 3 LED dan 1 button. Kendalikan 3 LED ini dengan 1 button tersebut agar bisa menyala berurutan.
-  
-   Keluaran
    
-
-
-
-
+   **Output GPIO 3**
 
    Analisa : Pada percobaan GPIO 3, ditambahkan 3 LED dan 1 Button (3 LED dikendalikan 1 button tsb). Sesuai dengan script yang dijalankan, maka dari hasil keluaran didapatkan bahwa ketika button3 ditekan maka LED akan menyala running dari kiri ke kanan dengan interval masing-masing LED selama 1 sekon. Dan LED akan mati ketika button3 dilepas.
    
    
-**3) Mengakses PWM ESP32**
-
-   Buatlah rangkaian seperti ini, kemudian running-kan dengan 2 script berbeda. Script pertama hanya menyalakan 1 LED di pin 16. Sedangkan script kedua menyalakan 3 LED.
+3) Mengakses PWM ESP32 
+Buatlah rangkaian seperti ini, kemudian running-kan dengan 2 script berbeda. Script pertama hanya menyalakan 1 LED di pin 16. Sedangkan script kedua menyalakan 3 LED.
   
  
   
