@@ -35,8 +35,8 @@
    Analisa : Pada percobaan GPIO 3, ditambahkan 3 LED dan 1 Button (3 LED dikendalikan 1 button tsb). Sesuai dengan script yang dijalankan, maka dari hasil keluaran didapatkan bahwa ketika button3 ditekan maka LED akan menyala running dari kiri ke kanan dengan interval masing-masing LED selama 1 sekon. Dan LED akan mati ketika button3 dilepas.
    
    
-3) Mengakses PWM ESP32 
-Buatlah rangkaian seperti ini, kemudian running-kan dengan 2 script berbeda. Script pertama hanya menyalakan 1 LED di pin 16. Sedangkan script kedua menyalakan 3 LED.
+3) Mengakses PWM ESP32 <br />
+   Buatlah rangkaian seperti ini, kemudian running-kan dengan 2 script berbeda. Script pertama hanya menyalakan 1 LED di pin 16. Sedangkan script kedua menyalakan 3 LED.
   
  
   
