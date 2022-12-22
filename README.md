@@ -25,42 +25,40 @@
     
      https://user-images.githubusercontent.com/118170084/209113309-07147da6-15a6-4671-8308-92cd9acda3ed.mp4
    
-     Analisa : Pada percobaan GPIO 2 ini ditambahkan 1 LED dan 1 Button lagi (dalam gambar rangkaiannya langsung pada rangkaian GPIO 3). Sesuai dengan script yang dijalankan, hasil keluaran didapatkan bahwa jika button2 ditekan maka LED akan menyala 5 detik dan mati 5 detik, akan terus seperti itu selama button2 ditekan. Dan LED akan mati jika button2 dilepas.
+     Analisa : Pada percobaan GPIO 2 ini ditambahkan 1 LED dan 1 Button lagi. Output yang dihasilkan yaitu jika button ditekan maka LED akan menyala dan mati selama waktu yang ditentukuan. LED akan mati jika button tidak ditekan.
    
      *GPIO 3* - Kemudian, tambahkan 3 LED dan 1 button. Kendalikan 3 LED ini dengan 1 button tersebut agar bisa menyala berurutan.
    
      https://user-images.githubusercontent.com/118170084/209113435-8b718fcb-63ab-4c69-a7e6-27132ddf21ac.mp4
 
-     Analisa : Pada percobaan GPIO 3, ditambahkan 3 LED dan 1 Button (3 LED dikendalikan 1 button tsb). Sesuai dengan script yang dijalankan, maka dari hasil keluaran didapatkan bahwa ketika button3 ditekan maka LED akan menyala running dari kiri ke kanan dengan interval masing-masing LED selama 1 sekon. Dan LED akan mati ketika button3 dilepas.
+     Analisa : Pada percobaan GPIO 3, output yang dihasilkan yaitu ketika button ditekan maka LED akan menyala running dari kiri ke kanan dengan interval masing-masing LED selama 1 sekon. Dan LED akan mati ketika button tidak ditekan.
    
    
 3) Mengakses PWM ESP32 <br />
-
-   Buatlah rangkaian seperti ini, kemudian running-kan dengan 2 script berbeda. Script pertama hanya menyalakan 1 LED di pin 16. Sedangkan script kedua menyalakan 3 LED.
    
-   *Menyalakan 1 LED (PWM 1)*
+   *- Menyalakan 1 LED (PWM 1)*
    
    https://user-images.githubusercontent.com/118170084/209116921-7d02a986-6f15-42e3-b912-0606ee0a7f83.mp4
  
-   Analisa : Pada percobaan ini digunakan metode PWM (Pulse Width Modulation) yaitu pendekatan pelebaran pulsa dengan menghasilkan nilai tegangan analog dengan maksimal tegangan HIGH 3,3 V dan LOW 0 V. Pin pada PWM ini mengeluarkan sinyal digital yang dihasilkan dari dutty cycle (perbandingan HIGH dan LOW dalam 1 periode). Pada percobaan PWM 1 dengan 1 LED ini digunakan frekuensi 5000 Hz dan resolusi 8 bit (255 byte). Dari script yang dijalankan, LED akan menyala 5x lebih terang dari penglihatan mata manusia (karena 5000 Hz) dengan dutty cycle 100%. Karena terdapat delay 0,015 sekon, maka LED akan redup dengan kecepatan 0,015 sekon, lalu kemudian akan terang kembali.
+   Analisa : Pada percobaan PWM 1 mengunakan 1 LED yang akan dinyalakan dan dimatikan selama waktu yang ditentukan yaitu 0,015 detik.
    
-   *Menyalakan 3 LED (PWM 2)*
+   *- Menyalakan 3 LED (PWM 2)*
    
    https://user-images.githubusercontent.com/118170084/209117170-259f3ec4-045f-4b4f-b796-8af0594fee2f.mp4
 
-   Analisa : Pada percobaan ini hampir sama dengan PWM 1, namun pada PWM 2 digunakan 3 LED sekaligus. Dari script yang dijalankan juga menggunakan frekuensi 5000 Hz, resolusi 8 bit, dan dutty cycle 100%. Dan akan terjadi redup dengan delay 0,015 sekon secara bersamaan dan kembali terang secara bersamaan pula.
+   Analisa : Untuk percobaan PWM 2 ini sama seperti PWM 1 hanya saja menggunakan 3 LED yang akan dinyalakan dan dimatikan secara bersamaan.
 
 4) ADC dan DAC <br />
 
-   **ADC DAC 1** - Buatlah rangkaian seperti ini dengan script di bawah. Kemudian putar potensiometer agar menghasilkan nilai 0 dan 4095. Lihat hasilnya.
+   *- ADC DAC 1* - Buatlah rangkaian seperti ini dengan script di bawah. Kemudian putar potensiometer agar menghasilkan nilai 0 dan 4095. Lihat hasilnya.
    
    https://user-images.githubusercontent.com/118170084/209121132-85250035-d8b6-4d93-b9e4-6b35ca038c5a.mp4
 
 
-   Analisa : Pada percobaan ADC dan DAC 1 ini digunakan potensiometer 4K Ohm sebagai pembaca analog mulai dari 0 sampai 4095. ADC / DAC ini adalah coverter yang mengubah nilai analog ke digital maupun digital ke analog, dimana pembacaan nilai 0 setara dengan 0 V dan nilai 4095 setara dengan 3,3 V. Dalam percobaan ADC/DAC 1 ini, pada keluaran didapatkan apabila potensio diputar ke kanan maka nilainya akan bertambah sampai maksimum 4095 (3,3V), dan apabila diputar ke kiri maka nilainya akan berkurang sampai minimum 0 (0 V) dengan waktu 0,5 sekon tiap pembacaan pada serial monitor.
+   Analisa : Output pada percobaan ADC/DAC 1 yaitu apabila potensio diputar ke kanan maka nilainya akan bertambah sampai maksimum 4095 (3,3V), dan apabila diputar ke kiri maka nilainya akan berkurang sampai minimum 0 (0 V) dengan waktu 0,5 sekon tiap pembacaan pada serial monitor.
    
-   **ADC DAC 2** - Kemudian tambahkan LED pada rangkaian tersebut. Putar potensio dan lihat apa yang terjadi pada LED dan serial monitor.
+   *- ADC DAC 2* - Kemudian tambahkan LED pada rangkaian tersebut. Putar potensio dan lihat apa yang terjadi pada LED dan serial monitor.
    
    https://user-images.githubusercontent.com/118170084/209121331-cd978a52-ab92-4027-aacc-61f49f9d5dd8.mp4
 
-   Analisa : Pada percobaan ADC/DAC 2 ini hampir sama dengan ADC/DAC 1, namun perbedaannya hanya pada menambahkan LED untuk memastikan apakah benar jika nilainya bertambah maka voltasenya akan bertambah pula. Pada keluaran didapatkan bahwa jika potensio diputar ke kanan, maka nilai akan bertambah sampai maksimum 4095 dan voltase akan mencapai maksimum 3,3 V. Ini bisa dibuktikan dengan lampu LED yang terpasang. Ketika nilai bertambah, dapat dilihat LED akan menyala lebih terang dari kondisi awal. Dan ketika potensio diputar ke kiri, maka LED akan redup lalu kemudian mati jika nilainya mencapai 0 atau 0 Volt. 
+   Analisa : Untuk output pada ADC/DAC 2 ini sama seperti ADC/DAC 1, hanya saja ditambahkan LED. Jadi ketika potensio diputar ke kanan (nilainya bertambah), maka LED akan menyala lebih terang dari kondisi awal. Dan ketika potensio diputar ke kiri, maka LED akan redup lalu kemudian mati jika nilainya mencapai 0.
