@@ -12,8 +12,8 @@
 
 
 **LANGKAH KERJA**
-1) Instal lebih dulu Board ESP32 pada Arduino IDE
-2) Mengakses GPIO ESP32
+1) Pertama install board ESP32 pada Arduino IDE 
+2) Mengakses GPIO ESP32 <br />
    **GPIO 1** - Rangkaian dengan 1 LED dengan 1 button. Kendalikan LED tersebut dengan button yang ada.
    
    ![foto GPIO 1](https://user-images.githubusercontent.com/118170084/209065091-9b4f6e10-ffa3-46ab-9e8f-6967a642ba00.jpg)
